@@ -15,7 +15,7 @@ function PlayerPreview (props) {
       </div>
       <button
         className='reset'
-        onClick={props.onReset.bind(null, props.id)}>
+        onClick={props.onReset.bind(null, 'playerTwo')}>
           Reset
       </button>
     </div>
@@ -26,7 +26,6 @@ PlayerPreview.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   onReset: PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired
 };
 
 class PlayerInput extends React.Component {
@@ -140,7 +139,6 @@ class Battle extends React.Component {
               avatar={playerOneImage}
               username={playerOneName}
               onReset={this.handleReset}
-              id='playerOne'
             />}
 
           {!playerTwoName &&
@@ -155,7 +153,6 @@ class Battle extends React.Component {
               avatar={playerTwoImage}
               username={playerTwoName}
               onReset={this.handleReset}
-              id='playerTwo'
             />}
         </div>
 
