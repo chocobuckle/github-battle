@@ -1,39 +1,64 @@
 {
   "name": "github-battle",
   "version": "1.0.0",
-  "description": "Project for React Training's fundamental course.",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "NODE_ENV='production' webpack -p",
-    "firebase-init": "firebase login && firebase init",
-    "deploy": "npm run build && firebase deploy"
-  },
-  "author": "Tyler McGinnis",
   "license": "MIT",
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
-  "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
-    "babel-preset-env": "^1.2.2",
-    "babel-preset-react": "^6.23.0",
-    "css-loader": "^0.27.3",
-    "firebase-tools": "^3.5.0",
-    "html-webpack-plugin": "^2.28.0",
-    "style-loader": "^0.16.0",
-    "webpack": "^2.3.1",
-    "webpack-dev-server": "^2.4.2"
+  "broswerslist": [
+    "> 1%",
+    "ie > 9"
+  ],
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "scripts": {
+    "build": "rimraf build && cross-env NODE_ENV=production webpack -p",
+    "deploy": "yarn build && firebase deploy",
+    "deploy-github": "git subtree push --prefix build origin gh-pages",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
+    "eslint": "eslint src/**/*.js",
+    "firebase-init": "firebase login && firebase init",
+    "pre-commit": "yarn stylelint && yarn eslint",
+    "stylelint": "stylelint src/index.css"
   },
   "dependencies": {
-    "axios": "^0.16.0",
-    "prop-types": "^15.5.4",
-    "react": "^16.0.0-alpha.5",
-    "react-dom": "^16.0.0-alpha.5",
-    "react-router-dom": "^4.0.0"
+    "axios": "^0.16.2",
+    "prop-types": "^15.5.10",
+    "query-string": "^5.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "chalk": "^2.1.0",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "cssnano": "^3.10.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "firebase-tools": "^3.9.2",
+    "html-webpack-plugin": "^2.28.0",
+    "postcss-loader": "^2.0.6",
+    "pre-commit": "^1.2.2",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-order": "^0.6.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }
