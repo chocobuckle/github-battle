@@ -1,16 +1,24 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-    Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    Helvetica Neue,
+    sans-serif;
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 a {
-  text-decoration: none;
   color: #d0021b;
+  text-decoration: none;
 }
 
 ul {
@@ -22,16 +30,16 @@ li {
 }
 
 .button {
-  color: #e6e6e6;
   background: #0a0a0a;
   border: none;
-  font-size: 16px;
   border-radius: 3px;
-  width: 200px;
-  text-align: center;
+  color: #e6e6e6;
   display: block;
-  padding: 7px 0;
+  font-size: 16px;
   margin: 10px auto;
+  padding: 7px 0;
+  text-align: center;
+  width: 200px;
 }
 
 .button:hover:enabled {
@@ -45,8 +53,8 @@ li {
 }
 
 .avatar {
-  width: 150px;
   border-radius: 50%;
+  width: 150px;
 }
 
 .space-list-items {
@@ -59,9 +67,9 @@ li {
 }
 
 .languages li {
-  margin: 10px;
-  font-weight: bold;
   cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
 }
 
 .popular-list {
@@ -81,9 +89,9 @@ li {
 }
 
 .home-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .nav {
@@ -104,40 +112,40 @@ li {
 }
 
 .column {
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 500px;
-  align-items: center;
 }
 
 .column input {
+  border: 1px solid rgba(0, 0, 0, 0.43);
   border-radius: 3px;
+  font-size: 16px;
   margin: 10px 0;
   padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.43);
-  font-size: 16px;
   width: 80%;
 }
 
 .column label {
-  text-align: center;
   font-size: 30px;
   font-weight: 200;
+  text-align: center;
 }
 
 .header {
-  text-align: center;
   font-size: 30px;
   font-weight: 200;
+  text-align: center;
 }
 
 .reset {
-  border: none;
   background: transparent;
+  border: none;
   color: #d0021b;
   display: block;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .reset:hover {
