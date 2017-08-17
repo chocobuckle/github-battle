@@ -57,7 +57,7 @@ export default {
   async battle(players) {
     try {
       const userData = await Promise.all(players.map(getUserData));
-      return await sortPlayers(userData);
+      return sortPlayers(userData);
     } catch (error) {
       console.warn(`Error in 'api.battle': ${error}'`);
       return null;
