@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { shape, object, bool, string } from 'prop-types';
 import PlayerInput from './PlayerInput';
 import PlayerPreview from './PlayerPreview';
 
 export default class Battle extends Component {
+  static propTypes = {
+    match: shape({
+      isExact: bool,
+      params: object,
+      path: string,
+      url: string
+    }).isRequired
+  }
+
   state = {
     playerOneName: '',
     playerTwoName: '',
@@ -30,13 +40,12 @@ export default class Battle extends Component {
   }
 
   render() {
-    const { match } = this.props; // eslint-disable-line react/prop-types
+    const { match } = this.props;
     const { playerOneName, playerTwoName, playerOneImage, playerTwoImage } = this.state;
 
     return (
       <div>
         <div className='row'>
-          {/* eslint-disable react/jsx-no-bind */}
           {!playerOneName &&
             <PlayerInput id='playerOne' label='Player One' onSubmit={this.handleSubmit} />}
 
@@ -56,7 +65,6 @@ export default class Battle extends Component {
                 Reset
               </button>
             </PlayerPreview>}
-          {/* eslint-enable react/jsx-no-bind */}
         </div>
 
         {playerOneImage &&

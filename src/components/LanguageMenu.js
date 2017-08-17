@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, func } from 'prop-types';
 
-function LanguageMenu({ selectedLanguage, onSelect }) {
+export default function LanguageMenu({ selectedLanguage, onSelect }) {
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
-  /* eslint-disable react/jsx-no-bind, jsx-a11y/no-noninteractive-element-interactions */
+  /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
   return (
     <ul className='languages'>
       {languages.map(lang => (
@@ -19,8 +19,6 @@ function LanguageMenu({ selectedLanguage, onSelect }) {
 }
 
 LanguageMenu.propTypes = {
-  selectedLanguage: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired
+  selectedLanguage: string.isRequired,
+  onSelect: func.isRequired
 };
-
-export default LanguageMenu;

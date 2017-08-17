@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { string, func } from 'prop-types';
 
 export default class PlayerInput extends Component {
   static propTypes = {
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    onSubmit: PropTypes.func.isRequired
+    id: string.isRequired,
+    label: string.isRequired,
+    onSubmit: func.isRequired
   }
 
   static defaultProps = {

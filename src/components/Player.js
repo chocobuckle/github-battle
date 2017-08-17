@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, number, object, oneOfType } from 'prop-types';
 import Profile from './Profile';
 
 export default function Player({ label, profileInfo, score }) {
@@ -13,7 +13,11 @@ export default function Player({ label, profileInfo, score }) {
 }
 
 Player.propTypes = {
-  label: PropTypes.string.isRequired,
-  score: PropTypes.number.isRequired,
-  profileInfo: PropTypes.object.isRequired
+  label: string.isRequired,
+  score: number.isRequired,
+  profileInfo: oneOfType([
+    string,
+    object,
+    number
+  ]).isRequired
 };

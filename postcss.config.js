@@ -3,6 +3,6 @@ module.exports = {
   to: 'build/index.css',
   plugins: {
     autoprefixer: {},
-    cssnano: {},
-  },
+    cssnano: {}
+  }
 };

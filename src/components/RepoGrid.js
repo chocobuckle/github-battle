@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, object } from 'prop-types';
 
 export default function RepoGrid({ repos }) {
   return (
@@ -8,7 +8,7 @@ export default function RepoGrid({ repos }) {
         <li key={name} className='popular-item'>
           <ul className='space-list-items'>
             <li className='popular-rank'>#{index + 1}</li>
-            <li>
+            <li className='repo-container'>
               <img
                 className='avatar'
                 src={owner.avatar_url}
@@ -27,5 +27,5 @@ export default function RepoGrid({ repos }) {
 }
 
 RepoGrid.propTypes = {
-  repos: PropTypes.array.isRequired
-};
+  repos: arrayOf(object)
+}.isRequired;

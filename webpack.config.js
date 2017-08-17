@@ -117,6 +117,21 @@ module.exports = {
         }
       },
       {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 15000,
+              name: '[name].[ext]'
+            }
+          },
+          {
+            loader: 'image-webpack-loader'
+          }
+        ]
+      },
+      {
         test: /\.css$/,
         use: PRODUCTION ? cssProduction : cssDevelopment
       },

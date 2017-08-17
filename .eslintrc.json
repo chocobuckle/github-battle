@@ -28,7 +28,6 @@
 		"no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
 		"no-use-before-define": "off",
 		"no-shadow": "off",
-		"react/forbid-prop-types": "off",
 		"react/jsx-closing-bracket-location": [
 			"error",
 			{

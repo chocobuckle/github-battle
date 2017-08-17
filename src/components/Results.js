@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import queryString from 'query-string';
 import api from '../utils/api';
 import Loading from './Loading';
@@ -8,7 +8,12 @@ import Player from './Player';
 
 export default class Results extends Component {
   static propTypes = {
-    location: PropTypes.object.isRequired
+    location: shape({
+      hash: string,
+      key: string,
+      pathname: string,
+      seach: string
+    }).isRequired
   }
 
   state = {

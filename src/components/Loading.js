@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { string, number } from 'prop-types';
 
 const styles = {
   content: {
@@ -10,8 +10,8 @@ const styles = {
 
 export default class Loading extends Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
-    speed: PropTypes.number.isRequired
+    text: string.isRequired,
+    speed: number.isRequired
   }
 
   static defaultProps = {

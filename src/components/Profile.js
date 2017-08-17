@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { oneOfType, string, number } from 'prop-types';
 import PlayerPreview from './PlayerPreview';
 
 export default function Profile({ profileInfo }) {
@@ -19,5 +19,8 @@ export default function Profile({ profileInfo }) {
 }
 
 Profile.propTypes = {
-  profileInfo: PropTypes.object.isRequired
-};
+  profileInfo: oneOfType([
+    string,
+    number
+  ])
+}.isRequired;
