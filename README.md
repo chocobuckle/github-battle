@@ -1,17 +1,10 @@
-<img src="https://cloud.githubusercontent.com/assets/2933430/24846370/3443ccfc-1d77-11e7-8d1d-dc64d86c3852.png" width="300" align="right">
+# Github Battle
+## [LIVE DEMO](https://github-battle-a5f22.firebaseapp.com/)
 
-React Fundamentals Video Project
-========
+A single-page application showcasing my knowledge of React, React Router, Webpack, ES6, and the Github API. Built while studying the most recent release of the React Training ['React Fundamentals'](https://tylermcginnis.com/courses/react-fundamentals/) program - the most up to date (v15.5) React course currently available. Enter two Github usernames and battle them against one another, or click on the 'popular' link in the nav bar to see the most popular repos currently on Github for your chosen language.
 
-#### This is the repository for the project we'll build together during React Trainings "React Fundamentals" course, for more information on the course see [reacttraining.com/online](https://reacttraining.com/online)
+![Screenshot of the application.](./github-battle.jpg?raw=true "Github Battle!")
 
-## You can see the final project [here](https://rt-react-fundamentals.firebaseapp.com/)
+## Getting Started
 
-This is a "Github Battle App". Enter in two Github usernames, and it'll declare a winner. 
-
-<img src="https://cloud.githubusercontent.com/assets/2933430/26085553/7dac7a1e-39a2-11e7-830a-9011505b5958.png" width="800">
-
-## Notes
-Every video is coincided with a branch. If you want to compare your code with mine or you just want to play around with the code, check out the different branches on this repository.
-
-[Tyler McGinnis](https://twitter.com/tylermcginnis33)
+Just download the repository, unzip, then navigate to the 'build' folder and click on 'index.html' to open the page in your default browser, or if you're feeling lazy then just click [here](https://github-battle-a5f22.firebaseapp.com/) to view the live version via Firebase.
